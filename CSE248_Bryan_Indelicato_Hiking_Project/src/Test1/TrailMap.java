@@ -1,13 +1,11 @@
 package Test1;
 
-import java.util.LinkedList;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class TrailMap {
 
 	private static TreeMap<Integer, Trail> trailMap = new TreeMap<Integer, Trail>();
-	private static LinkedList<Trail> trailMapLink = new LinkedList<Trail>();
 	
 	public static void addTree(Trail trail) {
 		trailMap.put(trail.hashCode(), trail);
@@ -27,13 +25,7 @@ public class TrailMap {
 		}
 	}
 	
-	public static void searchLinkedListName(String string) {
-		for(int i = 0; i < trailMapLink.size(); i++) {
-			if(trailMapLink.get(i).getName() == string) {
-				System.out.println(trailMapLink.get(i).toString());
-			}
-		}
-	}
+	
 	
 	public static void searchTreeName(String string) {
 		for(Map.Entry<Integer, Trail> entry : trailMap.entrySet()) {
@@ -43,13 +35,6 @@ public class TrailMap {
 			}
 		}
 	}
-	
-	public static void addLink(Trail trail) {
-		trailMapLink.add(trail);
-	}
-	
-	
-	
 	
 	
 	
