@@ -1,4 +1,4 @@
-package Utilities;
+
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -7,17 +7,26 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import com.sun.tools.javac.Main;
+
 import Test1.Trail;
 import Test1.TrailMap;
 import Test1.User;
 import Test1.UserBag;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
-public class Testing {
+public class Testing extends Application{
 
 	final static int SAMPLE_SIZE = 50000;
 	final static int TRAIL_SIZE = 50000;
 
 	public static void main(String[] arg) throws IOException {
+		Application.launch(arg);
+		
 		int index = (int) (Math.random() * TRAIL_SIZE);
 		List<User> userDataList = createUserList();
 		List<Trail> trailDataList = createTrailList();
@@ -25,7 +34,17 @@ public class Testing {
 		searchHashTableTest(userDataList.get(index).getUsername());
 		trailMapTreeMapTestTime(trailDataList);
 		trailMapTreeMapSearchTestTime(trailDataList.get(index).getName());
+		
+		
 
+	}
+	@Override
+	public void start(Stage primaryStage) throws Exception{
+		Pane signIn = (Pane) FXMLLoader.load(Main.class.getResource("LoginView.fxml"));
+		primaryStage.setScene(new Scene(signIn));
+		primaryStage.show();
+		
+		
 	}
 
 	public static void trailMapTreeMapSearchTestTime(String name) {
@@ -114,13 +133,13 @@ public class Testing {
 	
 
 	public static void searchHashTableTest(String userName) {
-		long start = System.nanoTime();
-		UserBag.searchHash(userName);
-		long end = System.nanoTime();
+		long start = System.currentTimeMillis();
+		UserBag.searchTree(userName);
+		long end = System.currentTimeMillis();
 		long duration = end - start;
 
-		System.out.println("It took: " + duration + " nanoseconds to search for the user profile: " + userName
-				+ " in the HashTable");
+		System.out.println("It took: " + duration + " milliseconds to search for the user profile: " + userName
+				+ " in the TreeMap");
 	}
 
 	

@@ -1,10 +1,11 @@
 package Test1;
 
-import java.util.Hashtable;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class UserBag {
 	
-	private static Hashtable<String, User> userData = new Hashtable<String, User>();
+	private static TreeMap<String, User> userData = new TreeMap<String, User>();
 	
 	
 	public static void addHash(User user) {
@@ -15,8 +16,14 @@ public class UserBag {
 		System.out.println(userData.toString());
 	}
 	
-	public static boolean searchHash(String userName) {	
-		return userData.containsKey(userName);
+	public static boolean searchTree(String userName) {	
+		for(Map.Entry<String, User> entry : userData.entrySet()) {
+			User user = entry.getValue();
+			if(user.getUsername() == userName) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	
