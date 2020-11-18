@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DetailedTrailController">
+   <children>
+      <Text layoutX="97.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detailed Trail Guide" />
+      <Text layoutX="46.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="56.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="44.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Difficulty:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="59.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="51.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Length:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="18.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elevation Gain">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="name" layoutX="179.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" />
+      <Text fx:id="address" layoutX="138.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" />
+      <Text fx:id="difficulty" layoutX="179.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" />
+      <Text fx:id="type" layoutX="179.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" />
+      <Text fx:id="length" layoutX="179.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" />
+      <Text fx:id="elevationGain" layoutX="179.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" />
+      <Button fx:id="exitButton" layoutX="40.0" layoutY="259.0" mnemonicParsing="false" onAction="#exit" text="Exit" />
+      <Button fx:id="deleteButton" layoutX="211.0" layoutY="259.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
+   </children>
+</Pane>

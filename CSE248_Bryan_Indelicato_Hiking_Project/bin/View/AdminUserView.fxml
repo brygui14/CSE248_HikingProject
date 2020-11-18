@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminUserController">
+   <children>
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User List Search" />
+      <TableView fx:id="userTable" layoutY="37.0" prefHeight="264.0" prefWidth="215.0">
+        <columns>
+          <TableColumn fx:id="username" prefWidth="104.0" text="UserName " />
+          <TableColumn fx:id="adminStatus" prefWidth="110.0" text="Admin " />
+        </columns>
+      </TableView>
+      <Button fx:id="exitButton" layoutX="238.0" layoutY="259.0" mnemonicParsing="false" onAction="#exit" text="Exit" />
+      <Button fx:id="createButton" layoutX="215.0" layoutY="224.0" mnemonicParsing="false" onAction="#create" text="Create User" />
+      <TextField fx:id="searchBox" layoutX="115.0" layoutY="9.0" />
+   </children>
+</Pane>
